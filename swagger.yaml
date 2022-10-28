@@ -1,38 +1,38 @@
 ---
 swagger: "2.0"
 info:
-  description: "This is a sample server Petstore server.  You can find out more about\
-    \ Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).\
+  description: "Dokumentasi API Museum Geologi.  You can find out backend\
+    \ website at [crootframework.herokuapp.com](https://crootframework.herokuapp.com/) and repository on [croot repo](https://github.com/InformaticsResearchCenter/croot).\
     \  For this sample, you can use the api key `special-key` to test the authorization\
     \ filters."
   version: "1.0.5"
-  title: "Swagger Petstore"
+  title: "Museum Geologi"
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "apiteam@swagger.io"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "petstore.swagger.io"
-basePath: "/v2"
+host: "crootframework.herokuapp.com"
+basePath: "/api"
 tags:
-- name: "pet"
-  description: "Everything about your Pets"
+- name: "scope"
+  description: "Everything about your Collection"
   externalDocs:
     description: "Find out more"
     url: "http://swagger.io"
-- name: "store"
-  description: "Access to Petstore orders"
+- name: "collection"
+  description: "Access to Collection orders"
 - name: "user"
   description: "Operations about user"
   externalDocs:
-    description: "Find out more about our store"
+    description: "Find out more about our collection"
     url: "http://swagger.io"
 schemes:
 - "https"
 - "http"
 paths:
-  /pet/{petId}/uploadImage:
+  /pet/{collectionId}/uploadImage:
     post:
       tags:
       - "pet"
@@ -46,7 +46,7 @@ paths:
       parameters:
       - name: "petId"
         in: "path"
-        description: "ID of pet to update"
+        description: "ID of collection to update"
         required: true
         type: "integer"
         format: "int64"
@@ -66,13 +66,13 @@ paths:
           schema:
             $ref: "#/definitions/ApiResponse"
       security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-  /pet:
+      - collectionstorage_auth:
+        - "write:collection"
+        - "read:collection"
+  /collection:
     post:
       tags:
-      - "pet"
+      - "collection"
       summary: "Add a new pet to the store"
       description: ""
       operationId: "addPet"
