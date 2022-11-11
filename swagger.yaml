@@ -35,8 +35,8 @@ paths:
   /collection/{collectionId}/uploadImage:
     post:
       tags:
-      - "collection"
-      summary: "uploads an image"
+      - "Invertebrata"
+      summary: "tambah data"
       description: ""
       operationId: "uploadFile"
       consumes:
