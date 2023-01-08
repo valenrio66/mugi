@@ -1,41 +1,24 @@
----
-swagger: "2.0"
+openapi: 3.0.1
 info:
+  title: "Museum Geologi Bandung API"
   description: "Dokumentasi API Museum Geologi.  You can find out backend\
     \ website at [sbc-sebatcabut.herokuapp.com](https://sbc-sebatcabut.herokuapp.com/) and repository on [batbut repo](https://github.com/batbut/sbc).\
     \  For this sample, you can use the api key `special-key` to test the authorization\
     \ filters."
-  version: "1.0.5"
-  title: "Museum Geologi"
+  version: '0.1'
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "apiteam@swagger.io"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "sbc-sebatcabut.herokuapp.com"
-basePath: "/api"
-tags:
-- name: "scope"
-  description: "Everything about your Collection"
-  externalDocs:
-    description: "Find out more"
-    url: "http://swagger.io"
-- name: "Fosil"
-  description: "Fosil Endpoint"
-- name: "user"
-  description: "Operations about user"
-  externalDocs:
-    description: "Find out more about our collection"
-    url: "http://swagger.io"
-schemes:
-- "https"
-- "http"
+servers:
+  - url: https://sbc-sebatcabut.herokuapp.com
 paths:
   /fosils:
     get:
-    tags:
-    - "Fosil"
+      tags:
+      - "Fosil"
       description: Auto generated using Swagger Inspector
       responses:
         '200':
@@ -46,6 +29,8 @@ paths:
       - url: https://sbc-sebatcabut.herokuapp.com
   /fosil/63ba2b1e9c3fd6f60b6a1184:
     put:
+      tags:
+      - "Fosil"
       description: Auto generated using Swagger Inspector
       requestBody:
         content:
@@ -90,6 +75,8 @@ paths:
       servers:
         - url: https://sbc-sebatcabut.herokuapp.com
     delete:
+      tags:
+      - "Fosil"
       description: Auto generated using Swagger Inspector
       responses:
         '200':
@@ -105,6 +92,8 @@ paths:
       - url: https://sbc-sebatcabut.herokuapp.com
   /fosil/638da9a8dba540cf8b62b890:
     get:
+      tags:
+      - "Fosil"
       description: Auto generated using Swagger Inspector
       responses:
         '200':
@@ -120,6 +109,8 @@ paths:
       - url: https://sbc-sebatcabut.herokuapp.com
   /fosil:
     post:
+      tags:
+      - "Fosil"
       description: Auto generated using Swagger Inspector
       requestBody:
         content:
