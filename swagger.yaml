@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Museum Geologi API Documentation
+  title: "Museum Geologi API Documentation"
   description: "Dokumentasi API Museum Geologi.  You can find out backend\
     \ website at [sbc-sebatcabut.herokuapp.com](https://sbc-sebatcabut.herokuapp.com/) and repository on [batbut repo](https://github.com/batbut/sbc).\
     \  For this sample, you can use the api key `special-key` to test the authorization\
