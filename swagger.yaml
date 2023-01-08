@@ -1,11 +1,12 @@
-openapi: 3.0.1
+---
+swagger: "2.0"
 info:
-  title: "Museum Geologi API Documentation"
   description: "Dokumentasi API Museum Geologi.  You can find out backend\
     \ website at [sbc-sebatcabut.herokuapp.com](https://sbc-sebatcabut.herokuapp.com/) and repository on [batbut repo](https://github.com/batbut/sbc).\
     \  For this sample, you can use the api key `special-key` to test the authorization\
     \ filters."
-  version: '0.1'
+  version: "1.0.5"
+  title: "Museum Geologi"
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "apiteam@swagger.io"
@@ -13,24 +14,23 @@ info:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 host: "sbc-sebatcabut.herokuapp.com"
+basePath: "/api"
 tags:
-- name: "Fosils"
-  description: "Fosil Endpoint"
+- name: "scope"
+  description: "Everything about your Collection"
   externalDocs:
     description: "Find out more"
     url: "http://swagger.io"
-- name: "Batuan"
-  description: "Batuan Endpoint"
-- name: "Invertebrata"
-  description: "Invertebrata Endpoint"
+- name: "collection"
+  description: "Access to Collection orders"
+- name: "user"
+  description: "Operations about user"
   externalDocs:
     description: "Find out more about our collection"
     url: "http://swagger.io"
 schemes:
 - "https"
 - "http"
-servers:
-  - url: https://sbc-sebatcabut.herokuapp.com
 paths:
   /fosils:
     get:
