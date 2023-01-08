@@ -21,8 +21,8 @@ tags:
   externalDocs:
     description: "Find out more"
     url: "http://swagger.io"
-- name: "collection"
-  description: "Access to Collection orders"
+- name: "Fosil"
+  description: "Fosil Endpoint"
 - name: "user"
   description: "Operations about user"
   externalDocs:
@@ -34,6 +34,8 @@ schemes:
 paths:
   /fosils:
     get:
+    tags:
+    - "Fosil"
       description: Auto generated using Swagger Inspector
       responses:
         '200':
